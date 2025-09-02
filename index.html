@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RS Indonesia</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background"></div>
+    <div class="container">
+        <h1 id="title">RS Gamelab Indonesia</h1>
+        <form id="patientForm">
+            <label for="rekam">Nomor Rekam:</label>
+            <input type="text" id="rekam" placeholder="Nomor Rekam" required>
+
+            <label for="nama">Nama Pasien:</label>
+            <input type="text" id="nama" placeholder="Nama Pasien" required>
+
+            <label for="alamat">Alamat:</label>
+            <input type="text" id="alamat" placeholder="Alamat" required>
+
+            <label for="penyakit">Penyakit:</label>
+            <input type="text" id="penyakit" placeholder="Penyakit" required>
+
+            <label for="nomorRuang">Nomor Ruang:</label>
+            <input type="text" id="nomorRuang" placeholder="Nomor Ruang" required>
+
+            <label for="bpjs">BPJS:</label>
+            <select id="bpjs" required>
+                <option value="">Pilih BPJS</option>
+                <option value="Tidak menggunakan">Tidak menggunakan</option>
+                <option value="Kelas I">Kelas I</option>
+                <option value="Kelas II">Kelas II</option>
+                <option value="Kelas III">Kelas III</option>
+            </select>
+
+            <label for="tanggalMasuk">Tanggal Masuk:</label>
+            <input type="date" id="tanggalMasuk" required>
+
+            <label for="tanggalKeluar">Tanggal Keluar:</label>
+            <input type="date" id="tanggalKeluar" placeholder="Tanggal Keluar (Kosong jika masih dirawat)">
+            <br>
+            <button type="button" id="saveBtn">💾 Save</button>
+            <button type="button" id="showBtn" onclick="toggleShow()">🔒 Show</button>
+            <button type="button" id="deleteBtn">🗑️ Delete</button>
+        </form>
+        <table id="patientTable" border="1">
+            <thead>
+                <tr>
+                    <th>Nomor Rekam</th>
+                    <th>Nama Pasien</th>
+                    <th>Alamat</th>
+                    <th>Penyakit</th>
+                    <th>Nomor Ruang</th>
+                    <th>BPJS</th>
+                    <th>Tanggal Masuk</th>
+                    <th>Tanggal Keluar</th>
+                    <th>Aksi</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody"></tbody>
+        </table>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
